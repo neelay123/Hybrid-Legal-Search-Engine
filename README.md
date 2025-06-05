@@ -46,7 +46,7 @@ Legal documents contain:
 
 ## Implementation Stack
 
-![image](https://github.com/user-attachments/assets/38e8a28e-b8ec-460a-a658-77a345b67474)
+![image](https://github.com/user-attachments/assets/f9737119-c40b-401c-acba-51c12614a7ce)
 
 
 - FastAPI (Backend & API)
