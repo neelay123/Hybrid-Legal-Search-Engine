@@ -1,0 +1,7 @@
+Sample Queries for Each Dataset
+
+CaseHOLD - Whether the police officer had probable cause to search the vehicle under the Fourth Amendment
+ECtHR A - Violation of Article 8 right to privacy due to unlawful surveillance
+ECtHR B - Cases involving torture under Article 3 of the European Convention
+EUR-Lex - Directive on renewable energy targets for 2030
+SCOTUS - First Amendment protections for social media content moderation
