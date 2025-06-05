@@ -23,7 +23,7 @@ Legal documents contain:
 
 ## System Architecture
 
-![System Architecture Diagram](images/system_architecture.png)
+![image](https://github.com/user-attachments/assets/09cc5eb5-6bb6-48e6-9328-4f5c1faf5645)
 
 1. **Query Handling**  
    User submits a legal query via the UI (FastAPI backend)  
@@ -37,11 +37,17 @@ Legal documents contain:
    Outputs top *N* most relevant documents (e.g., Top 10–20)  
 
 4. **Response**  
-   Re-ranked results are returned to the user interface for exploration  
+   Re-ranked results are returned to the user interface for exploration
+
+![image](https://github.com/user-attachments/assets/5d03ebcd-efca-46f3-9f3a-485715df3116)
+
 
 ---
 
 ## Implementation Stack
+
+![image](https://github.com/user-attachments/assets/38e8a28e-b8ec-460a-a658-77a345b67474)
+
 
 - FastAPI (Backend & API)
 - Elasticsearch (BM25-based retrieval)
@@ -58,7 +64,8 @@ Legal documents contain:
 **System Response:**  
 *Results are from the CASE_HOLD dataset and reflect LEGALBERT re-ranking. All results shown are re-ranked — no raw BM25 output is exposed.*
 
-![Example Query Output](images/example_query_output.png)
+![image](https://github.com/user-attachments/assets/74cfb4a3-eefd-4e4b-a31e-8f7c4788e8b4)
+
 
 ---
 
