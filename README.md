@@ -1,1 +1,84 @@
 # Hybrid-Legal-Search-Engine
+**Combining BM25 with Domain-Adapted LegalBERT**
+
+## Why a Hybrid Legal Search Engine?
+
+Legal documents contain:  
+- Formal, domain-specific vocabulary  
+- Dense references (e.g., case laws, statutes)  
+
+**BM25** is:  
+- Fast and interpretable  
+- Lacks semantic understanding  
+
+**LEGALBERTSMALL** is:  
+- Domain-aware and context-sensitive  
+- Computationally intensive on large corpora  
+
+**Problem:** Neither approach alone suffices for real-world legal research.  
+
+**Our Solution:** Combine BM25’s speed with LEGALBERT’s semantic depth.  
+
+---
+
+## System Architecture
+
+![System Architecture Diagram](images/system_architecture.png)
+
+1. **Query Handling**  
+   User submits a legal query via the UI (FastAPI backend)  
+
+2. **Initial Retrieval**  
+   Query is sent to Elasticsearch  
+   BM25 retrieves top *K* candidate documents (e.g., Top 100)  
+
+3. **Semantic Re-Ranking**  
+   LEGALBERTSMALL scores and re-ranks the candidates  
+   Outputs top *N* most relevant documents (e.g., Top 10–20)  
+
+4. **Response**  
+   Re-ranked results are returned to the user interface for exploration  
+
+---
+
+## Implementation Stack
+
+- FastAPI (Backend & API)
+- Elasticsearch (BM25-based retrieval)
+- LEGALBERTSMALL (Semantic re-ranking)
+- CASE_HOLD dataset (Evaluation and testing)
+
+---
+
+## Example Query Output
+
+**Query Submitted:**  
+> “data protection”
+
+**System Response:**  
+*Results are from the CASE_HOLD dataset and reflect LEGALBERT re-ranking. All results shown are re-ranked — no raw BM25 output is exposed.*
+
+![Example Query Output](images/example_query_output.png)
+
+---
+
+## Qualitative Evaluation & Observations
+
+- Current implementation outputs **only final ranked results**  
+- No ground-truth labels or automatic relevance metrics used (yet)  
+
+---
+
+## Key Strengths & Future Plans
+
+- **Shallow keyword search:** LEGALBERTSMALL for semantic re-ranking  
+- **Complex legal vocabulary:** Domain-adapted transformer embeddings  
+- **Speed vs accuracy trade-off:** BM25 for speed + LEGALBERT for precision  
+- **Usability:** Simple interface with fast, interpretable results  
+
+### Future Plans:
+- Introduce measurable evaluations  
+- Add explainability features  
+- Expand to new legal domains and languages  
+
+---
