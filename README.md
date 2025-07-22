@@ -1,5 +1,10 @@
 # Hybrid-Legal-Search-Engine
 **Combining BM25 with Domain-Adapted LegalBERT**
+The system employs BM25 for the initial retrieval of documents, followed by semantic re-ranking using a
+lightweight, domain-adapted version of BERT (LEGALBERTSMALL). By integrating these two
+approaches, our design aims to address the challenges of legal text retrieval, offering improved
+relevance and efficiency for complex legal queries.
+
 
 ## Why a Hybrid Legal Search Engine?
 
